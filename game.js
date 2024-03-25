@@ -8,6 +8,11 @@ ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
 const pixelSize = 10;
 
+function drawBox(x, y, w, h, color = "white")  {
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, w, h);
+}
+
 
 class Mob {
   isPlayer = false;
