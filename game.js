@@ -7,7 +7,7 @@ const ctx = canvas.getContext('2d');
 ctx.fillStyle = "black";
 ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
-const pixelSize = 10;
+const pixelSize = 40;
 
 function drawBox(x, y, w, h, color = "white")  {
   ctx.fillStyle = color;
@@ -35,5 +35,12 @@ class Item {
 
 }
 
-let block = new Block(3, 3, "red");
-block.draw();
+let blocks = [];
+
+for(let i = 0; i < 10; i++) {
+  blocks.push(new Block(i, i, "red"));
+}
+
+for(let i = 0; i < 10; i++) {
+  blocks[i].draw();
+}
