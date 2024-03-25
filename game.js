@@ -4,15 +4,15 @@ canvas.height = window.innerHeight;
 document.body.appendChild(canvas);
 
 const ctx = canvas.getContext('2d');
-ctx.fillStyle = "black";
-ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
-const pixelSize = 40;
+const blockSize = 40;
 
 function drawBox(x, y, w, h, color = "white")  {
   ctx.fillStyle = color;
   ctx.fillRect(x, y, w, h);
 }
+
+drawBox(0, 0, window.innerWidth, window.innerHeight, "black");
 
 
 class Mob {
@@ -27,7 +27,7 @@ class Block {
   }
 
   draw = () => {
-    drawBox(self.x * pixelSize, self.y * pixelSize, pixelSize, pixelSize, this.color);
+    drawBox(self.x * blockSize, self.y * blockSize, blockSize, blockSize, this.color);
   }
 }
 
@@ -44,3 +44,4 @@ for(let i = 0; i < 10; i++) {
 for(let i = 0; i < 10; i++) {
   blocks[i].draw();
 }
+drawBox(110, 510, 123, 234, "yellow");
