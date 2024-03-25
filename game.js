@@ -27,7 +27,7 @@ class Block {
   }
 
   draw = () => {
-    drawBox(self.x * blockSize, self.y * blockSize, blockSize, blockSize, this.color);
+    drawBox(this.x * blockSize, this.y * blockSize, blockSize, blockSize, this.color);
   }
 }
 
@@ -44,4 +44,3 @@ for(let i = 0; i < 10; i++) {
 for(let i = 0; i < 10; i++) {
   blocks[i].draw();
 }
-drawBox(110, 510, 123, 234, "yellow");
